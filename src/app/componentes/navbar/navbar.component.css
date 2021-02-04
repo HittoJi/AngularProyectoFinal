@@ -1,0 +1,121 @@
+* {
+    font-family: Garamond, serif;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    z-index: 3;
+}
+
+.navbar-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5em;
+}
+
+.navbar-items img {
+    margin-top: -15px;
+    width: 60px;
+    height: 50px;
+    /* border: 1px solid red; */
+    padding: -50px;
+}
+
+.navbar-items a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar-items a:hover {
+    background-color:  #53a7ea;/* crimson; */
+    /* color: black; */
+}
+
+.navbar-items a:hover:first-child {
+    background-color: hsla(0, 100%, 90%, 0.0);
+    /* color: black; */
+}
+
+.navbar-items a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navbar-items .menu {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-items a:hover {
+        background-color: black;
+        color: white;
+    }
+    .navbar-items>a {
+        display: flex;
+        flex-direction: row;
+        display: none;
+    }
+    .navbar-items a.menu {
+        display: block;
+    }
+    .navbar-items {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        flex-wrap: nowrap;
+    }
+    .navbar-items img {
+        width: 60px;
+        height: 50px;
+    }
+    .submenu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .submenu li {
+        display: block;
+    }
+    .submenu a:hover {
+        background-color: crimson;
+    }
+    .submenu {
+        display: none;
+    }
+}
+
+
+/* catalogo----------------------------------------------------------- */
+
+.catalogo {
+    display: none;
+}
+
+.catalogoUl {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: black;
+    margin-left: -60px;
+}
+
+.catalogoUl li {
+    display: inline-block;
+    width: 4em;
+}
+.catalogoUl a:hover{
+    width: 20px;
+    color: black;
+    
+}

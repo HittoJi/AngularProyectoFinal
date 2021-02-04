@@ -1,0 +1,21 @@
+<div class="navbar">
+    <div class="navbar-items" id="myTopnav">
+        <a [routerLink]="['home']"><img class="navlogo" src="../../../assets/logos/logo-2.png" alt="Img no disponible"></a>
+        <!-- <a>Solicitar Cita</a> -->
+        <a (mouseenter)="openCatalogo()" (mouseleave)="closeCatalogo()">&nbsp;&nbsp;Tienda&nbsp;&nbsp;
+            <ul id="catalogo" class="catalogo">
+                <li><a [routerLink]="['products']">Productos</a></li>
+        <li><a [routerLink]="['products']">Servicios</a></li>
+        </ul>
+        </a>
+        <!-- <a [routerLink]="['productos']">Productos</a> -->
+        <a [routerLink]="['login']">LOGIN</a>
+        <a class="menu" id="menu" (click)="openSubmenu()" (mouseleave)="closeSubmenu()" (mouseenter)="openSubmenu()">
+            Menu
+            <ul class="submenu">
+                <li><a>Solicitar Cita</a></li>
+        <li><a [routerLink]="['login']">LOGIN</a></li>
+        </ul>
+        </a>
+    </div>
+</div>

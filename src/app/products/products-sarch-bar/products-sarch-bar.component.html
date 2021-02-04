@@ -1,0 +1,26 @@
+<div class="filtrar">
+    <div class="ordenacion">
+        <div>
+            <li>Catalogo
+                <ul>
+                    <li *ngFor="let tipoProduct of tipoProducto">{{tipoProduct}}</li>
+                </ul>
+               </li>
+        </div>
+        <div>
+            <li>Ordenar
+                <ul>
+                    <li><a href="">Nuevos</a></li>
+                    <li><a href="">Top Ventas</a></li>
+                    <li><a href="">Recomendados</a></li>
+                </ul>
+            </li>
+        </div>
+    </div>
+   <div>
+        <!-- <input type="search" placeholder="Que estas buscando"  name="searchProduct" id="searchProduct" [(ngModel)]="searchProduct"> -->
+        <input type="search" [(ngModel)]="searchProduct">
+       
+        <button>Buscar</button>
+   </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="loginPage">
+    <h1>Inicia sesión.</h1>
+    <form>
+        <div class="form-login">
+            <label for="email">Email</label>
+            <input [(ngModel)] = "user.name" type="text" name="email" id="email" autofocus>
+            <label for="pswd">Contraseña</label>
+            <input [(ngModel)] = "user.passwd" type="password" id="pswd" name="pswd">
+            <div>
+                <label for="recordar">Recordar</label>
+                <input type="checkbox" name="recordar" [(ngModel)] = "recordar"/>
+            </div>
+            <button type="submit" (click)="login();">Iniciar sesion</button>
+        </div>
+    </form>
+    <div class="forgotpswd">
+        <a href="">¿Has olvidado tu contraseña?</a>
+        <a href="">¿No tienes cuenta? Créate uno ahora.</a>
+    </div>
+</div>

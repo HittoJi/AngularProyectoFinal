@@ -1,0 +1,135 @@
+* {
+    font-family: Garamond, serif;
+}
+body{
+    margin: 0px;
+}
+.page-item{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+.barraDeBusqueda{
+    display: flex;
+    justify-content: center;
+}
+.one-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.item-header h3{
+    color:  #53a7ea;
+    margin-left: .5em;
+}
+.item-header h4{
+    margin-left: .5em;
+}
+.item-header {
+    text-align: start;
+    background-color: gainsboro;
+    margin-bottom: .5em;
+}
+.item-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5em;
+}
+.item-img img{
+    max-width: 50em;
+    max-height: 50em;
+}
+
+
+@media (max-width: 800px) {
+    .item-img img{
+        max-width: 45em;
+        max-height: 45em;
+    }
+}
+@media (max-width: 700px) {
+    .item-img img{
+        max-width: 35em;
+        max-height: 35em;
+    }
+}
+@media (max-width: 400px) {
+    .item-img img{
+        max-width: 22em;
+        max-height: 22em;
+    }
+}
+
+.item-propiedad{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.item-propiedad ul{
+    border-bottom: solid 1px black;
+}
+
+.item-precio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:  #53a7ea;
+    margin-bottom: .5em;
+    transition: 3s;
+}
+.item-footer{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+.footer-title{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    background-color: gainsboro;
+    margin-bottom: .2em;
+}
+.footer-title h3:first-child{
+    border-right: solid #53a7ea 1px;
+}
+
+.item-caracteristicas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    background-color: gainsboro;
+    /* align-items: center; */
+}
+.item-caracteristicas li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.item-comentatios{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    height: 30em;
+    overflow-y: auto;
+}
+.item-comentatios h3{
+    text-align: center;
+}
+.comentatio{
+    background-color: gainsboro;
+    border-left: solid #53a7ea 1px;
+    border-bottom: solid black 1px;
+}
+.comentatio:hover{
+    background-color:  #53a7ea ;
+}
+.comentatio h5 {
+    margin-left: .2em;
+}
+
+.comentatio p {
+    margin-left: .2em;
+}
+

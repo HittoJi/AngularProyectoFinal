@@ -1,0 +1,8 @@
+{"productos":[
+    {"id":"1","tipo":"Televisiones","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"80.95€","img":"/assets/logo-2.png"},
+    {"id":"2","tipo":"Portatiles","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"70.95€","img":"/assets/logo-2.png"},
+    {"id":"3","tipo":"Moviles y SmartPhones","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"60.95€","img":"/assets/logo-2.jpg"},
+    {"id":"4","tipo":"Tablets","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"60.95€","img":"/assets/logo-2.jpg"},
+    {"id":"5","tipo":"Accesorios de Informatica","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"60.95€","img":"/assets/logo-2.jpg"},
+    {"id":"6","tipo":"Consolas","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"50.95€","img":"/assets/logo-2.jpg"}
+]}

@@ -1,0 +1,116 @@
+
+.filtrar {
+    position: relative;
+    top: -30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    z-index: 2;
+
+}
+
+.ordenacion{
+    display: flex;
+    flex-direction: row;
+}
+.filtrar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.filtrar li {
+    display: inline-block;
+    width: 150px;
+    /* height: 30px; */
+    padding: 5px 10px;
+    background-color: black;
+    border: 1px solid black;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    /* border-bottom-left-radius: 1em;
+    border-top-left-radius: 1em; */
+    transition: width 1s, height 1s;
+}
+
+.filtrar li:hover {
+    background-color: #53a7ea;
+    color: #000;
+    width: 180px;
+}
+
+.filtrar li>ul {
+    display: none;
+}
+
+.filtrar li:hover>ul {
+    display: block;
+    position: absolute;
+    top: .85em;
+    left: -41px;
+}
+
+.filtrar input {
+    width: 70%;
+    height: 100%;
+    border-left: none;
+    border-right: none;
+    border-top-color: #53a7ea;
+    border-bottom-color: #53a7ea;
+    text-align: center;
+
+}
+
+.filtrar button {
+    width: 30%;
+    height: 100%;
+    background-color: #53a7ea;
+    color: white;
+    border: 0;
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+    /* transition: width 5s, height 5s; */
+}
+
+.filtrar button:hover {
+    background-color: #008eff;
+}
+
+.ordenacion div:first-child{
+    border-right: solid  #53a7ea 2px;
+}
+
+
+@media (max-width: 700px) {
+    .productPage {
+        margin-top: 150px;
+    }
+    .filtrar {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        /* justify-content: space-between; */
+    }
+    .ordenacion{
+        display: flex;
+        flex-direction: row;
+    }
+    .filtrar input {
+        border: solid 2px #53a7ea;
+        width: 70%;
+        height: 2em;
+        /* border-top: none; */
+    }
+    .filtrar button {
+        width: 30%;
+        height: 2em;
+        background-color: #53a7ea;
+        color: white;
+        border: 0;
+        border-bottom-right-radius: 0em;
+        border-top-right-radius: 0em;
+        transition: width 5s, height 5s;
+    }
+}

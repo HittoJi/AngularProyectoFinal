@@ -1,0 +1,9 @@
+<div class="productPage">
+    <div class="barraDeBusqueda">
+        <app-products-sarch-bar></app-products-sarch-bar>
+    </div>
+
+    <div class="listaItems">
+        <app-products-item [product]="product" *ngFor="let product of productos  "></app-products-item>
+                                                                            <!--aqui | productFilter:searchProduct -->
+    </div>
