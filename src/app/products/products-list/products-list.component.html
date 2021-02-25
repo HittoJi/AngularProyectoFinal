@@ -2,8 +2,8 @@
     <div class="barraDeBusqueda">
         <app-products-sarch-bar></app-products-sarch-bar>
     </div>
-
+    <!-- <input type="text" name="searchProduct" id="searchProduct" value="Televisiones" [(ngModel)]="criteri"> -->
     <div class="listaItems">
-        <app-products-item [product]="product" *ngFor="let product of productos  "></app-products-item>
-                                                                            <!--aqui | productFilter:searchProduct -->
+        <app-products-item [product]="product" *ngFor="let product of productos | productFilter:criteri" ></app-products-item>
+<!-- aqui | productFilter:searchProduct -->
     </div>

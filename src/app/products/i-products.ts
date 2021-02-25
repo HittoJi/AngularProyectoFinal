@@ -1,4 +1,5 @@
 export interface IProducts {
+    ratting: number;
     id :Number;
     tipo :String;
     nombreYDetalles :String;

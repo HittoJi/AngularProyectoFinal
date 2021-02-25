@@ -1,0 +1,39 @@
+* {
+    font-family: Garamond, serif;
+}
+
+.loginPage {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .7em;
+}
+.form-login div {
+    display: flex;
+    flex-direction: row;
+}
+.form-login button {
+    width: 100%;
+    height: 3em;
+    border-radius: 1em;
+    box-shadow: none;
+    background-color: #0070ff;
+    color: white;
+    border: 0;
+}
+input.ng-invalid{
+    color:red;
+}
+input.ng-valid{
+    color:green;
+    /* border:solid 2px green; */
+}
+
+

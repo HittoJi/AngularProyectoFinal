@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IProducts } from '../i-products';
 
 @Component({
@@ -7,11 +7,19 @@ import { IProducts } from '../i-products';
   styleUrls: ['./products-item.component.css']
 })
 export class ProductsItemComponent implements OnInit {
+  @Output() rattingChanged = new EventEmitter<number>();
   @Input() product!: IProducts;
+
   image = '';
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  auxRatting!: number;
 
+  ngOnInit(): void {
+    this.auxRatting = this.product.ratting;
+  }
+  puntuar(i: number): void {
+    this.rattingChanged.emit(this.auxRatting);
+  }
 }

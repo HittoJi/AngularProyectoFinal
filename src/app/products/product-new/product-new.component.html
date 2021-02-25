@@ -1,0 +1,26 @@
+<div class="loginPage">
+    <h1>Editar Producto</h1>
+    <form [formGroup]="formProduct">
+        <div class="form-login">
+            <label for="id">Id</label>
+            <input type="text" name="id" 
+                id="id" formControlName="id" 
+                [ngClass]="{'is-valid':idValid, 'is-invalid':idValid===false}">
+            <label for="Name">Name</label>
+            <input type="text" id="name" name="Name" 
+            formControlName="name" [ngClass]="{'is-valid':idValid, 'is-invalid':idValid===false}">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" id="descripcion" name="descripcion" 
+            formControlName="descripcion" [ngClass]="{'is-valid':idValid, 'is-invalid':idValid===false}">
+            <label for="precio">Precio</label>
+            <input type="text" id="precio" name="precio" 
+            formControlName="precio" [ngClass]="{'is-valid':idValid, 'is-invalid':idValid===false}">
+            <p></p>
+            <button type="submit">Guardar cambios</button>
+        </div>
+        <pre>
+            valid:{{formProduct.valid}}
+            fromulario:{{formProduct.value | json}}
+        </pre>
+    </form>
+</div>

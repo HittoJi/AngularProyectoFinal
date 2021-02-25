@@ -1,8 +1,8 @@
 {"productos":[
-    {"id":"1","tipo":"Televisiones","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"80.95€","img":"/assets/logo-2.png"},
-    {"id":"2","tipo":"Portatiles","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"70.95€","img":"/assets/logo-2.png"},
-    {"id":"3","tipo":"Moviles y SmartPhones","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"60.95€","img":"/assets/logo-2.jpg"},
-    {"id":"4","tipo":"Tablets","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"60.95€","img":"/assets/logo-2.jpg"},
-    {"id":"5","tipo":"Accesorios de Informatica","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"60.95€","img":"/assets/logo-2.jpg"},
-    {"id":"6","tipo":"Consolas","nombreYDetalles":"Nombre del producto y algun otro dato","descripcion":"Descriocion del producto","precio":"50.95€","img":"/assets/logo-2.jpg"}
+    {"id":"1","tipo":"Televisiones","nombreYDetalles":"Smart TV televisión","precio":"80.95€","img":"/assets/img/televisiones.png"},
+    {"id":"2","tipo":"Portatiles","nombreYDetalles":"Macbook pro","descripcion":"Descriocion del producto","precio":"70.95€","img":"/assets/img/portatiles.png"},
+    {"id":"3","tipo":"Moviles","nombreYDetalles":"iPhone 6s","descripcion":"Descriocion del producto","precio":"60.95€","img":"/assets/img/moviles.png"},
+    {"id":"4","tipo":"Tablets","nombreYDetalles":"Sony Xperia Z4","descripcion":"Descriocion del producto","precio":"60.95€","img":"/assets/img/tablets.png"},
+    {"id":"5","tipo":"Accesorios de informatica","nombreYDetalles":"Accesorios de informatica","precio":"60.95€","img":"/assets/img/accesorios de informatica.png"},
+    {"id":"6","tipo":"Consolas","nombreYDetalles":"Xbox one","descripcion":"Descriocion del producto","precio":"50.95€","img":"/assets/img/consolas.png"}
 ]}

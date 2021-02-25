@@ -39,6 +39,7 @@
     background-color: #53a7ea;
     color: #000;
     width: 180px;
+
 }
 
 .filtrar li>ul {
@@ -48,7 +49,7 @@
 .filtrar li:hover>ul {
     display: block;
     position: absolute;
-    top: .85em;
+    top: 1.15em;
     left: -41px;
 }
 

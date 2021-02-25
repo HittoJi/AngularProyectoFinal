@@ -3,7 +3,14 @@
         <img src='{{product.img}}' alt="IMG">
     </div>
     <div class="card-detail">
-        <h4>Nombre del producto y algun otro dato</h4>
+        <h2>{{product.nombreYDetalles}}</h2>
         <span>{{product.precio}}</span>
+        
     </div>
+    <p (mouseleave)="auxRatting=product.ratting">
+        <span class="star" *ngFor="let i of [1,2,3,4,5]"
+            (mouseleave)="puntuar(i)" (mouseenter)="auxRatting = i">
+            {{ i <= auxRatting ? '★' : '☆' }}
+        </span>
+    </p>
 </div>

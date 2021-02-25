@@ -6,11 +6,24 @@ import { IProducts } from './i-products';
 })
 export class ProductFilterPipe implements PipeTransform {
 
-  transform(products: IProducts[], filterBy: string): IProducts[] {
-    const filter = filterBy ? filterBy.toLocaleLowerCase() : null; // passem el filtre a minúscules o a null si no està
-    return filter ?  // Si no és null filtra
-    products.filter(p => p.nombreYDetalles.toLocaleLowerCase().includes(filter))
-    : products; // si és null trau l'array sense filtre
-    // return products.filter(p=>p.tipo === criterio)
+  transform(products: IProducts[], criteri: string): IProducts[] {
+    const c = criteri ? criteri.toLocaleLowerCase() : null;
+    products = c ? products.filter(p=> p.tipo.toLocaleLowerCase().includes(c)): products;
+    return products;
+    // return products.filter(p=>{
+    //   return p.tipo===criteri;
+    //   console.log(p.tipo);
+    //   console.log(criteri);
+    // });
+  }
+}
+@Pipe({
+  name: 'productSearch'
+})
+export class ProductFilterPipeSearch implements PipeTransform {
+  transform(products: IProducts[], criteri: string): IProducts[] {
+    const c = criteri ? criteri.toLocaleLowerCase() : null;
+    products = c ? products.filter(p=> p.nombreYDetalles.toLocaleLowerCase().includes(c)): products;
+    return products;
   }
 }

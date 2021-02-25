@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/user/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private auth:AuthService) { }
+  logued: boolean = false;
   ngOnInit(): void {
+    this.logued = this.auth.isAuth();
+    this.auth.isLogued().subscribe(l => {this.logued = l})
   }
+  logout(){
+    this.auth.logOut();
+    this.logued = false;
+  }
+  changeText = false;
+  // -------------------------------------------
   cambiarNavImg(){
     // Para poder cambiar el tamaño img
     let navlogo = document.querySelector(".navlogo")
@@ -26,18 +35,5 @@ export class NavbarComponent implements OnInit {
     let catalogo = document.querySelector("#catalogo");
     catalogo?.setAttribute("class","catalogo"); 
   }
-  openSubmenu() {
-    let submenu = document.querySelector(".submenu");
-    // let x = getComputedStyle(submenu);
-    // if (x.display =="none") {
-    //   submenu?.setAttribute("style", "display: block;");
-    // }else{
-    //   submenu?.setAttribute("style", "display: none;");
-    // }
-    
-  }
-  closeSubmenu(){
-    let submenu= document.querySelector(".submenu");
-    submenu?.setAttribute("style", "display: none;");
-  }
+  
 }

@@ -1,21 +1,51 @@
 <div class="navbar">
     <div class="navbar-items" id="myTopnav">
-        <a [routerLink]="['home']"><img class="navlogo" src="../../../assets/logos/logo-2.png" alt="Img no disponible"></a>
+        <a [routerLink]="['home']"><img class="navlogo" src="../../../assets/navbar/logo.png"
+                alt="Img no disponible"></a>
         <!-- <a>Solicitar Cita</a> -->
         <a (mouseenter)="openCatalogo()" (mouseleave)="closeCatalogo()">&nbsp;&nbsp;Tienda&nbsp;&nbsp;
             <ul id="catalogo" class="catalogo">
                 <li><a [routerLink]="['products']">Productos</a></li>
-        <li><a [routerLink]="['products']">Servicios</a></li>
-        </ul>
+                <li><a [routerLink]="['newProduct']">New product</a></li>
+            </ul>
         </a>
         <!-- <a [routerLink]="['productos']">Productos</a> -->
-        <a [routerLink]="['login']">LOGIN</a>
-        <a class="menu" id="menu" (click)="openSubmenu()" (mouseleave)="closeSubmenu()" (mouseenter)="openSubmenu()">
-            Menu
-            <ul class="submenu">
-                <li><a>Solicitar Cita</a></li>
-        <li><a [routerLink]="['login']">LOGIN</a></li>
-        </ul>
+        <a *ngIf="!logued" [routerLink]="['login']" >Login</a>
+
+
+
+        <a class="menu-cesta" *ngIf="logued">
+            <img mat-button [matMenuTriggerFor]="afterMenu" src="../../../assets/navbar/shoping-bag.png" alt="Img no disponible">
+            <!-- <img mat-button [matMenuTriggerFor]="afterMenu" src="../../../assets/navbar/shoping-bag.png" alt="Img no disponible" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()"> -->
+            <mat-menu #afterMenu="matMenu" class="menu-cesta-opciones">
+                <!-- <span (mouseleave)="menuTrigger.closeMenu()" class="test"> -->
+                    <span class="menuPuntero">&nbsp;&nbsp;&nbsp;</span>
+                    <div class="menu-cesta-item">
+                        <img src="../../../assets/navbar/shoping-bag.png" alt="" srcset="">
+                        <a>Cesta</a>
+                    </div>
+                    <div class="menu-cesta-item">
+                        <img src="../../../assets/navbar/box.png" alt="" srcset="">
+                        <a>Pedidos</a>
+                    </div>
+                    <div class="menu-cesta-item" *ngIf="logued">
+                        <img src="../../../assets/navbar/setting.png" alt="" srcset="">
+                        <a>Cuenta</a>
+                    </div>
+                    <div class="menu-cesta-item" *ngIf="!logued" [routerLink]="['login']" (mouseover)="changeText=true" (mouseleave)="changeText=false" >
+                        <img *ngIf="!changeText" src="../../../assets/navbar/login.png" alt="" srcset="">
+                        <img *ngIf="changeText" src="../../../assets/navbar/loginOver.png" alt="" srcset="">
+                        <a>Login</a>
+                    </div>
+                    <div class="menu-cesta-item" *ngIf="logued"(mouseover)="changeText=true" (mouseleave)="changeText=false" >
+                        <img *ngIf="!changeText" src="../../../assets/navbar/login.png" alt="" srcset="">
+                        <img *ngIf="changeText" src="../../../assets/navbar/loginOver.png" alt="" srcset="">
+                        <a (click)="logout()" >Logout</a>
+                    </div>
+                <!-- </span> -->
+            </mat-menu>
         </a>
+      
+        <a [routerLink]="['home']" class="menu" id="menu"></a>
     </div>
 </div>

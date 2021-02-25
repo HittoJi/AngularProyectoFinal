@@ -11,9 +11,15 @@ import { ProductsItemComponent } from './products/products-item/products-item.co
 import { HomeComponent } from './componentes/home/home.component';
 import { ProductsService } from './products/products.service';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductsSarchBarComponent } from './products/products-sarch-bar/products-sarch-bar.component';
 import { ProductFilterPipe } from './products/product-filter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu'; 
+import {MatButtonModule} from '@angular/material/button';
+import { ProductNewComponent } from './products/product-new/product-new.component'; 
 
 @NgModule({
   declarations: [
@@ -25,13 +31,20 @@ import { ProductFilterPipe } from './products/product-filter.pipe';
     ProductsItemComponent,
     HomeComponent,
     ProductsSarchBarComponent,
-    ProductFilterPipe
+    ProductFilterPipe,
+    ProductNewComponent,  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatMenuModule
   ],
   providers: [ProductsService], //Aqui hay que meter los servicios
   bootstrap: [AppComponent]

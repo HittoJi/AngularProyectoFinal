@@ -22,6 +22,6 @@ export class LoginComponent implements OnInit {
         this.user = u;
       },
         e=>console.log(e)
-    );    
+    );
   }
 }

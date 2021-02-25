@@ -1,11 +1,11 @@
 <div class="filtrar">
     <div class="ordenacion">
         <div>
-            <li>Catalogo
+            <li ><span (click)="onItemClick(-1)">Catalogo</span>
                 <ul>
-                    <li *ngFor="let tipoProduct of tipoProducto">{{tipoProduct}}</li>
+                    <li *ngFor="let tipoProduct of tipoProducto;let i = index" (click)="onItemClick(i)">{{tipoProduct}}</li>
                 </ul>
-               </li>
+            </li>
         </div>
         <div>
             <li>Ordenar
@@ -18,9 +18,7 @@
         </div>
     </div>
    <div>
-        <!-- <input type="search" placeholder="Que estas buscando"  name="searchProduct" id="searchProduct" [(ngModel)]="searchProduct"> -->
-        <input type="search" [(ngModel)]="searchProduct">
-       
+        <input (input)="canviarCriteri()" name="crit" [(ngModel)]="criteri" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button>Buscar</button>
    </div>
 </div>
